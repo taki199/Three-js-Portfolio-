@@ -1,0 +1,118 @@
+@import "./base.scss";
+.skills{
+    position: relative;
+    font-size: 40px;
+    height: -100%;
+    background:#fff;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 1rem;
+    &__header{
+        font-weight: 600;
+        color:$purple-electric;
+        font-family: 'Beam Weapon', sans-serif;
+        font-family: 'Beam Weapon 3D', sans-serif;
+        font-family: 'Beam Weapon Gradient', sans-serif;
+        font-family: 'Beam Weapon Halftone', sans-serif;
+        font-family: 'Beam Weapon Laser', sans-serif;
+        font-family: 'Beam Weapon 3D Italic', sans-serif;
+        font-family: 'Beam Weapon Condensed', sans-serif;
+        font-family: 'Beam Weapon Condensed Italic', sans-serif;
+        font-family: 'Beam Weapon Expanded', sans-serif;
+        font-family: 'Beam Weapon Expanded Italic', sans-serif;
+        font-family: 'Beam Weapon Gradient Italic', sans-serif;
+        font-family: 'Beam Weapon Halftone Italic', sans-serif;
+        font-family: 'Beam Weapon Italic', sans-serif;
+        font-family: 'Beam Weapon Laser Italic', sans-serif;
+        font-family: 'Beam Weapon Leftalic', sans-serif;
+        font-family: 'Beam Weapon Super-Italic', sans-serif;
+        
+    }
+    &__text{
+        font-size: 25px;
+        color: black;
+        position: absolute;
+        white-space: nowrap;
+        font-family: 'Beam Weapon', sans-serif;
+        font-family: 'Beam Weapon 3D', sans-serif;
+        font-family: 'Beam Weapon Gradient', sans-serif;
+        font-family: 'Beam Weapon Halftone', sans-serif;
+        font-family: 'Beam Weapon Laser', sans-serif;
+        font-family: 'Beam Weapon 3D Italic', sans-serif;
+        font-family: 'Beam Weapon Condensed', sans-serif;
+        font-family: 'Beam Weapon Condensed Italic', sans-serif;
+        font-family: 'Beam Weapon Expanded', sans-serif;
+        font-family: 'Beam Weapon Expanded Italic', sans-serif;
+        font-family: 'Beam Weapon Gradient Italic', sans-serif;
+        font-family: 'Beam Weapon Halftone Italic', sans-serif;
+        font-family: 'Beam Weapon Italic', sans-serif;
+        font-family: 'Beam Weapon Laser Italic', sans-serif;
+        font-family: 'Beam Weapon Leftalic', sans-serif;
+        font-family: 'Beam Weapon Super-Italic', sans-serif;
+        &--left{
+            left: 0;
+            top: 6rem;
+            animation: moveleft 30s linear infinite;
+            -webkit-animation: moveleft 30s linear infinite;
+        @keyframes moveleft {
+                0%{
+                    transform: translate3d(0,0,0);
+                    -webkit-transform: translate3d(0,0,0);
+                    -moz-transform: translate3d(0,0,0);
+                    -ms-transform: translate3d(0,0,0);
+                    -o-transform: translate3d(0,0,0);
+                }
+                100%{
+                    transform: translate3d(-50%,0,0);
+                    -webkit-transform: translate3d(-50%,0,0);
+                    -moz-transform: translate3d(-50%,0,0);
+                    -ms-transform: translate3d(-50%,0,0);
+                    -o-transform: translate3d(-50%,0,0);
+                  }
+                
+            }
+}
+        &--right{
+            right:0 ;
+            top: 11rem;
+            animation: moveright 30s linear infinite;
+            -webkit-animation: moveright 30s linear infinite;
+            @keyframes moveright{
+                0%{
+                    transform: translate3d(0,0,0);
+                    -webkit-transform: translate3d(0,0,0);
+                    -moz-transform: translate3d(0,0,0);
+                    -ms-transform: translate3d(0,0,0);
+                    -o-transform: translate3d(0,0,0);
+                }
+                100%{
+                    transform: translate3d(50%,0,0);
+                    -webkit-transform: translate3d(50%,0,0);
+                    -moz-transform: translate3d(50%,0,0);
+                    -ms-transform: translate3d(50%,0,0);
+                    -o-transform: translate3d(50%,0,0);
+}
+                
+            }
+        }
+    }
+    @media screen {
+        &{
+            height: 200px;
+        }
+        &__text{
+            font-size: 25px;
+            &--left{
+                top: 5rem;
+               
+
+            }
+            &--right{
+                top: 8rem;
+               
+
+            }
+        }
+    }
+
+}

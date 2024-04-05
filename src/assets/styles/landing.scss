@@ -1,0 +1,324 @@
+@import "./base.scss";
+.landing{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: $box-shadow-blue1;
+    color:#fff;
+    overflow: hidden;
+    //background: transparent;
+    // background-image: url('../images/shapes/50.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .header{
+        position: absolute;
+        top:-100%;
+        left:50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        z-index: 2;
+        &__wrap{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 60vw;
+        }
+        &__left{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            & li{
+                font-size: 18px;
+                font-weight: 700;
+
+            }
+        }
+    @media (max-width:1200px) {
+        &__wrap{
+            width: 100vw;
+
+        }
+        
+    }
+    @media (max-width:650px) {
+        &__sm{
+            display: none;
+            
+        }
+        
+    }
+    @media (max-width:370px) {
+        &{
+            left:36%;
+        }
+        &__wrap{
+            gap:20%;
+        }
+        .coolLink[data-text="Home"]{
+            display: none;
+
+        }
+        
+    }
+}
+}
+.socials{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-5);
+    -moz-transform: translateX(-5);
+    -ms-transform: translateX(-5);
+    -o-transform: translateX(-5);
+    bottom: -100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+}
+.coloredIcon{
+    color: #fff;
+    font-size: 35px;
+    &:hover{
+        animation: coloredIconAnimation 0.2s infinite;
+     -webkit-animation: coloredIconAnimation 0.2s infinite;
+    }
+    
+    @keyframes coloredIconAnimation{
+        0%{
+            text-shadow: 5px 4px $red-color,-5px -6px $blue-color;
+        }
+        25% {
+            text-shadow: -5px -6px $red-color,5px 4px $blue-color;
+
+        }
+        50% {
+            text-shadow: 5px -4px $red-color,-8px 4px $blue-color;
+
+        }
+        75% {
+            text-shadow: -8px -4px $red-color,-5px -4px $blue-color;
+
+        } 
+        100% {
+            text-shadow: -5px 0 $red-color, 5px -4px $blue-color;
+
+        }
+        
+        
+    }
+
+
+}
+.scrollDown{
+    padding-top: 5px;
+    position: absolute;
+    bottom: -100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    z-index: 1;
+    &__wheel{
+        height: 42px;
+        width: 24px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border: 2px solid #fff;  
+        &--inner{
+            position: absolute;
+            left: 10px;
+            margin-top: 5px;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            animation: movingwheel 0.5s linear infinite;
+            -webkit-animation: movingwheel 0.5s linear infinite;
+     @keyframes movingwheel{
+
+                0%{
+                    top: 1px;
+
+                }
+                25%{
+                    top: 2px;
+
+                }
+                50%{
+                    top: 3px;
+                }
+                75%{
+                    top: 2px;
+
+                }
+                100%{
+                    top: 1px;
+                }
+                
+            }
+        }
+    }
+    .scrollDown__arrows{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        .scrollDown__arrow{
+            width: 15px;
+            height: 15px;
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid  #fff;
+            transform: rotate(45deg);
+            animation: scrollAnim 1s infinite;
+            -webkit-animation: scrollAnim 1s infinite;
+            animation-direction: alternate;
+            &:nth-child(1){
+                animation-delay: 0.1s;
+            }
+            &:nth-child(2){
+                animation-delay: 0.2s;
+            }
+            &:nth-child(3){
+                animation-delay: 0.3s;
+            }
+            @keyframes scrollAnim
+{
+                0%{
+                    opacity: 0;
+                }
+                50%{
+                    opacity: 0.5;
+                }
+                100%{
+                    opacity: 1;
+                }
+
+                
+            }
+            
+}
+    }
+    
+}
+.intro{
+    position: absolute;
+    top: 20%;
+    left: 1rem;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    color: #fff;
+    & h4{
+        font-size: 33px;
+        font-family: 'Beam Weapon', sans-serif;
+        font-family: 'Beam Weapon 3D', sans-serif;
+        font-family: 'Beam Weapon Gradient', sans-serif;
+        font-family: 'Beam Weapon Halftone', sans-serif;
+        font-family: 'Beam Weapon Laser', sans-serif;
+        font-family: 'Beam Weapon 3D Italic', sans-serif;
+        font-family: 'Beam Weapon Condensed', sans-serif;
+        font-family: 'Beam Weapon Condensed Italic', sans-serif;
+        font-family: 'Beam Weapon Expanded', sans-serif;
+        font-family: 'Beam Weapon Expanded Italic', sans-serif;
+        font-family: 'Beam Weapon Gradient Italic', sans-serif;
+        font-family: 'Beam Weapon Halftone Italic', sans-serif;
+        font-family: 'Beam Weapon Italic', sans-serif;
+        font-family: 'Beam Weapon Laser Italic', sans-serif;
+        font-family: 'Beam Weapon Leftalic', sans-serif;
+        font-family: 'Beam Weapon Super-Italic', sans-serif;
+
+                                                
+    }
+    & h1{
+        font-size: 30px;
+        width: 93%;
+        padding-top: 1rem;
+        font-family: 'Beam Weapon', sans-serif;
+        font-family: 'Beam Weapon 3D', sans-serif;
+        font-family: 'Beam Weapon Gradient', sans-serif;
+        font-family: 'Beam Weapon Halftone', sans-serif;
+        font-family: 'Beam Weapon Laser', sans-serif;
+        font-family: 'Beam Weapon 3D Italic', sans-serif;
+        font-family: 'Beam Weapon Condensed', sans-serif;
+        font-family: 'Beam Weapon Condensed Italic', sans-serif;
+        font-family: 'Beam Weapon Expanded', sans-serif;
+        font-family: 'Beam Weapon Expanded Italic', sans-serif;
+        font-family: 'Beam Weapon Gradient Italic', sans-serif;
+        font-family: 'Beam Weapon Halftone Italic', sans-serif;
+        font-family: 'Beam Weapon Italic', sans-serif;
+        font-family: 'Beam Weapon Laser Italic', sans-serif;
+        font-family: 'Beam Weapon Leftalic', sans-serif;
+        font-family: 'Beam Weapon Super-Italic', sans-serif;
+        
+
+                                                
+                                                
+       
+        
+    }
+   & .full{
+        color: $purple-electric;
+        font-family: 'KTech', sans-serif;                                                                    font-family: 'Beam Weapon', sans-serif;
+        font-family: 'Beam Weapon 3D', sans-serif;
+        font-family: 'Beam Weapon Gradient', sans-serif;
+        font-family: 'Beam Weapon Halftone', sans-serif;
+        font-family: 'Beam Weapon Laser', sans-serif;
+        font-family: 'Beam Weapon 3D Italic', sans-serif;
+        font-family: 'Beam Weapon Condensed', sans-serif;
+        font-family: 'Beam Weapon Condensed Italic', sans-serif;
+        font-family: 'Beam Weapon Expanded', sans-serif;
+        font-family: 'Beam Weapon Expanded Italic', sans-serif;
+        font-family: 'Beam Weapon Gradient Italic', sans-serif;
+        font-family: 'Beam Weapon Halftone Italic', sans-serif;
+        font-family: 'Beam Weapon Italic', sans-serif;
+        font-family: 'Beam Weapon Laser Italic', sans-serif;
+        font-family: 'Beam Weapon Leftalic', sans-serif;
+        font-family: 'Beam Weapon Super-Italic', sans-serif;
+                            
+                                                
+    }
+    @media (min-width:600px) {
+     & h4{
+            font-size: 20px;
+
+        }
+      & h1{
+            font-size:30px;
+        }
+        
+    }
+    @media (min-width:1200px) {
+        &{
+            left: 5%;
+        }
+     
+        & h4{ 
+        font-size: 50px;
+
+        }
+     & h5{
+        font-size: 70px;
+
+        }
+    }
+
+
+}
+.landing canvas{
+    position:absolute;
+    //z-index:1;
+}

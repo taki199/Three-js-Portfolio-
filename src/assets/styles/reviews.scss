@@ -1,0 +1,226 @@
+@import "./base.scss";  
+
+.reviews {
+    background: #fff;
+    color: black;
+    
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .instructor {
+        position: relative;
+        background: #28316013;
+        box-shadow: 0 8px 32px 0 $box-shadow-blue1;
+
+        &__curve {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            width: 30px;
+            height: 120%;
+            border-left: 2px solid $purple-electric;
+            border-radius: 50%;
+            box-shadow: 0 8px 32px 0 $box-shadow-blue2;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            transform: rotate(-20deg);
+            -webkit-transform: rotate(-20deg);
+            -moz-transform: rotate(-20deg);
+            -ms-transform: rotate(-20deg);
+            -o-transform: rotate(-20deg);
+}
+
+        &__infos {
+            color: $purple-electric;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 30px;
+            font-weight: 700;
+            font-family: 'Beam Weapon', sans-serif;
+        font-family: 'Beam Weapon 3D', sans-serif;
+        font-family: 'Beam Weapon Gradient', sans-serif;
+        font-family: 'Beam Weapon Halftone', sans-serif;
+        font-family: 'Beam Weapon Laser', sans-serif;
+        font-family: 'Beam Weapon 3D Italic', sans-serif;
+        font-family: 'Beam Weapon Condensed', sans-serif;
+        font-family: 'Beam Weapon Condensed Italic', sans-serif;
+        font-family: 'Beam Weapon Expanded', sans-serif;
+        font-family: 'Beam Weapon Expanded Italic', sans-serif;
+        font-family: 'Beam Weapon Gradient Italic', sans-serif;
+        font-family: 'Beam Weapon Halftone Italic', sans-serif;
+        font-family: 'Beam Weapon Italic', sans-serif;
+        font-family: 'Beam Weapon Laser Italic', sans-serif;
+        font-family: 'Beam Weapon Leftalic', sans-serif;
+        font-family: 'Beam Weapon Super-Italic', sans-serif;
+        }
+
+        &__img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border-right: 2px solid #f44336;
+            @media screen {
+                &{
+                    width: 150px;
+                    height: 150px;
+                }
+                
+            }
+
+        }
+
+        &__col {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        &__info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            & img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+.swiper__wrapper{
+    padding: 2rem 0;
+}
+.swiper{
+   
+    user-select: none;
+}
+.review{
+    position: relative;
+    display: flex;
+    font-size: 16px;
+    padding: 5px;
+    &__card{
+        position: relative;
+        width: 100%;
+        padding: 2rem 0;
+        display: flex;
+        @media (min-width:650px) {
+            font-size: 18px;
+        }
+    }
+    &__topborder{
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+    }
+    &__text{
+        span{
+            font-family: 'Beam Weapon', sans-serif;
+            font-family: 'Beam Weapon 3D', sans-serif;
+            font-family: 'Beam Weapon Gradient', sans-serif;
+            font-family: 'Beam Weapon Halftone', sans-serif;
+            font-family: 'Beam Weapon Laser', sans-serif;
+            font-family: 'Beam Weapon 3D Italic', sans-serif;
+            font-family: 'Beam Weapon Condensed', sans-serif;
+            font-family: 'Beam Weapon Condensed Italic', sans-serif;
+            font-family: 'Beam Weapon Expanded', sans-serif;
+            font-family: 'Beam Weapon Expanded Italic', sans-serif;
+            font-family: 'Beam Weapon Gradient Italic', sans-serif;
+            font-family: 'Beam Weapon Halftone Italic', sans-serif;
+            font-family: 'Beam Weapon Italic', sans-serif;
+            font-family: 'Beam Weapon Laser Italic', sans-serif;
+            font-family: 'Beam Weapon Leftalic', sans-serif;
+            font-family: 'Beam Weapon Super-Italic', sans-serif;
+            color: $purple-electric;
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+}
+.swiper-slide{
+    filter: blur(2px) !important;
+    -webkit-filter: blur(2px) !important;
+    transform: scale(0.8) !important;
+    -webkit-transform: scale(0.8) !important;
+    -moz-transform: scale(0.8) !important;
+    -ms-transform: scale(0.8) !important;
+    -o-transform: scale(0.8) !important;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.swiper-slide-active{
+  filter: blur(0) !important;
+  -webkit-filter: blur(0) !important;
+  transform: scale(1) !important;
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -ms-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
+}
+.swiper__tools{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6rem;
+    padding:0 4rem 0 2rem;
+   
+
+
+}
+.swiper__buttons{
+    display: flex;
+    button{
+        position: relative;
+        background: black;
+        padding: 1rem 3rem;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        border: 1px solid black;
+        margin-right: 2rem;
+        user-select: none;
+        color: black;
+        &:after{
+            display: none;
+        }
+        img{
+            filter: invert(100%);
+            -webkit-filter: invert(100%);
+       
+       }
+     &:first-of-type{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+     }
+     &:hover{
+        background:$purple-electric;
+     }
+
+
+}
+
+}
+.swiper-pagination{
+    position: relative;
+    display: none;
+    
+}

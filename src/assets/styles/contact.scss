@@ -1,0 +1,194 @@
+@import "./base.scss";
+.contact{
+    position: relative;
+    font-family: sans-serif;
+    &__header{
+        margin-bottom: 3rem;
+        font-family: 'Beam Weapon', sans-serif;
+        font-family: 'Beam Weapon 3D', sans-serif;
+        font-family: 'Beam Weapon Gradient', sans-serif;
+        font-family: 'Beam Weapon Halftone', sans-serif;
+        font-family: 'Beam Weapon Laser', sans-serif;
+        font-family: 'Beam Weapon 3D Italic', sans-serif;
+        font-family: 'Beam Weapon Condensed', sans-serif;
+        font-family: 'Beam Weapon Condensed Italic', sans-serif;
+        font-family: 'Beam Weapon Expanded', sans-serif;
+        font-family: 'Beam Weapon Expanded Italic', sans-serif;
+        font-family: 'Beam Weapon Gradient Italic', sans-serif;
+        font-family: 'Beam Weapon Halftone Italic', sans-serif;
+        font-family: 'Beam Weapon Italic', sans-serif;
+        font-family: 'Beam Weapon Laser Italic', sans-serif;
+        font-family: 'Beam Weapon Leftalic', sans-serif;
+        font-family: 'Beam Weapon Super-Italic', sans-serif;
+        color: $purple-electric;
+        font-size: 30px;
+        
+
+    }
+    @media (max-width:1100px) {
+        
+         padding: 2rem;
+        
+         
+     }
+    &__profile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3rem;
+        
+        &-item{
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img{
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+}
+        }
+        &-col{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 17px;
+            z-index: 1;
+
+        }
+        
+    }
+    &__footer{
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        width: 100%;
+        &-link{
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            @media (max-width: 900px){
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+.form{
+ &__info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5vw;
+    font-weight: 500;
+    input{
+        font-size: inherit;
+        font-weight: inherit;
+        border: none;
+        background: transparent;
+        border-bottom: 1px solid $purple-electric;
+        color: #444 ;
+        &:focus{
+            outline: none;
+        }
+    }
+
+ }
+ &__flex{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    textarea{
+        width: 70%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $purple-electric;
+        font-size: 2.2vw;
+        color: #444;
+        resize: none;
+        &:focus{
+            outline: none;
+        }
+
+    }
+    .coolButton{
+        font-weight: 900;
+        font-size: 20px;
+        &::before{
+            background: #fff;
+        }
+        &:after{
+            display: none;
+        }
+        &:hover:before{
+            background: $purple-electric;
+            
+        }
+    }
+ }
+}
+
+@media (max-width:900px) {
+    .form{
+        &__flex{
+            flex-direction: column;
+            textarea{
+                font-size: 4vw;
+            }   
+        }
+        &__info{
+            font-size: 4vw;
+            input{
+                font-size: 4vw;
+            }
+        }
+        
+
+    }
+    
+}
+@media (max-width:800px) {
+    .contact .coolButton{
+        transform: scale3d(1,1,1);
+        -webkit-transform: scale3d(1,1,1);
+        -moz-transform: scale3d(1,1,1);
+        -ms-transform: scale3d(1,1,1);
+        -o-transform: scale3d(1,1,1);
+        font-size: 19px;
+}
+    
+}
+
+@media (max-width:610px){
+    .form{
+        &__info{
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 5vw;
+            width: 100%;
+            input{
+                font-size: inherit;
+                width: 100%;
+            }
+        }
+        &__flex{
+            textarea{
+                width: 100%;
+                font-size: 5vw;
+
+            }
+            
+
+        }
+        
+    }
+}
